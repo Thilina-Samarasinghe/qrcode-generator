@@ -69,6 +69,22 @@ qr-generator/
 
 ---
 
+## 🗄️ Database Schema
+
+### `events` Table
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `id` | `String (UUID)` | Unique identifier (Primary Key) |
+| `title` | `String` | Name of the event |
+| `date` | `DateTime` | Event date and time |
+| `location` | `String` | Venue address or city |
+| `ticketPrice` | `Float` | Price of the ticket |
+| `qrCode` | `Text` | Base64 encoded signed QR code image |
+| `createdAt` | `DateTime` | Record creation timestamp |
+| `updatedAt` | `DateTime` | Last update timestamp |
+
+---
+
 ## 🛡️ Security Implementation (HMAC)
 
 Unlike standard QR generators that store plain text, this system ensures data integrity:
